@@ -39,7 +39,7 @@
           var data = new FormData(form);
           var output = "";
           for (const entry of data) {
-            output = "Vote: " + entry[1];
+            output = "{ Vote: \""+ entry[1]+"\"}";
           };
           log.innerText = output;
           console.log(output);
