@@ -42,8 +42,11 @@
             output = "Vote: " + entry[1];
           };
           log.innerText = output;
+          console.log(output);
+          var outputParsed = JSON.parse(output);
+          console.log(outputParsed);
           //to do: check if send to the blockchain
-          sendTransatcionToBigChainDB(output);
+          sendTransatcionToBigChainDB(outputParsed);
           event.preventDefault();
         },false);
     </script>
