@@ -22,6 +22,7 @@ function sendTransatcionToBigChainDB (assetdata){
       const txCreateAliceSimpleSigned = BigchainDB.Transaction.signTransaction(txCreateAliceSimple, alice.privateKey)
       // Send the transaction off to BigchainDB
       let conn = new BigchainDB.Connection(API_PATH)
+      console.log("after let conn")
       conn.postTransactionCommit(txCreateAliceSimpleSigned)
       .then(res => {
             createTxId = res.id
