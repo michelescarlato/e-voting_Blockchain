@@ -6,7 +6,9 @@ function sendTransatcionToBigChainDB (assetdata){
       // Create a new keypair for Alice and Bob
       const alice = new BigchainDB.Ed25519Keypair()
       let createTxId
-      const metadata = {"Token":"123456789101112131415", "District":"DistrictA"}
+      const DistrictNode = document.querySelector('meta[name="description"]').content;
+      
+      const metadata = {"Token":"123456789101112131415", "District":+DistrictNode+""}
       // Construct a transaction payload
       const txCreateAliceSimple = BigchainDB.Transaction.makeCreateTransaction(
               assetdata,
