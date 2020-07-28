@@ -13,6 +13,15 @@
       <h1>Voting web application</h1>
       <form>
         <div ng-app = "">
+            <input type="text" id="token" value="Please insert your token">
+           <button onclick="tokenVerification()">Verify your token</button>
+           <p id="token"></p>
+           <script>
+              function tokenVerification() {
+              var x = document.getElementById("token").value;
+              document.getElementById("token").innerHTML = x;
+              }
+           </script>
            <p>Vote your party:</p>
            <div>
              <input type = "radio" ng-model = "Vote" value="White" checked>
