@@ -1,7 +1,7 @@
-function myFunctionETIS() {
-  const Parameter = $('#mySelectETIS').val().split(',')[0];
-  const Indicator = $('#mySelectETIS').val().split(',')[1];
-  const querySortByCount = $('#mySelectETIS').val().split(',')[2];
+function myFunctionVote() {
+  const Parameter = $('#mySelectVote').val().split(',')[0];
+  const Indicator = $('#mySelectVote').val().split(',')[1];
+  const querySortByCount = $('#mySelectVote').val().split(',')[2];
   console.log(querySortByCount)
   Calculate(Parameter, Indicator, querySortByCount);
 }

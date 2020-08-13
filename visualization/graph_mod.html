@@ -4,7 +4,7 @@
     <title>Data Visualization</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <meta name="description" content="visitors">
+    <meta name="description" content="DistrictA">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="calculate_mod.js"></script>
@@ -72,14 +72,16 @@
       <a href="#home">Home</a>
       <a href="#news">News</a>
     </div>
-    <h3>Indicators visualized from a blockchain</h3>
-    <form>ETIS indicators:
-      <select id="mySelectETIS">
+    <h3>Vote registered into the blockchain</h3>
+    <form>Vote percentage:
+      <select id="mySelectVote">
         <option value=""></option>
-        <option value="Vote, Vote percentage,queryVote">Vote percentage</option>
-        <option value="DisabilityConsiderations, A.4.1 ETIS Indicator: The percentage of visitors who note that they are aware of destination sustainability efforts,queryDisabilityConsiderations">A.4.1 ETIS Indicator: The percentage of visitors who note that they are aware of destination sustainability efforts</option>
+        <option value="Vote, Vote percentage,queryVote">Total vote percentage</option>
+        <option value="Vote, Vote percentage DistrictA,queryVote">Vote percentage DistrictA</option>
+        <option value="Vote, Vote percentage DistrictA,queryVote">Vote percentage DistrictB</option>
+        <option value="Vote, Vote percentage DistrictA,queryVote">Vote percentage DistrictC</option>
       </select>
-      <input type="button" onclick="myFunctionETIS();this.form.reset()" value="Calculate"><p>
+      <input type="button" onclick="myFunctionVote();this.form.reset()" value="Calculate"><p>
     </form>
 
 
