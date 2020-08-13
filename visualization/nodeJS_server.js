@@ -64,13 +64,13 @@ app.get('/', function(req, res, next) {
 
 		switch(querySortByCount){
 			//ETIS
-			case 'queryDisabilityConsiderations':
-				querySortByCount = {$sortByCount:"$data.Disability considerations"};
+			case 'Vote':
+				querySortByCount = {$sortByCount:"$data.Vote"};
 				break;
 			case 'querySatisfaction':
 				querySortByCount = {$sortByCount:"$data.Overall Satisfaction"};
 				break;
-			//socio demographic
+			/*socio demographic
 			case 'queryCity':
 				querySortByCount = {$sortByCount :"$data.City"};
 				break;
@@ -95,7 +95,7 @@ app.get('/', function(req, res, next) {
 				break;
 			case 'queryInterestingFeatures':
 				querySortByCount = {$sortByCount :"$data.Interesting Features"};
-				break;
+				break;*/
 			}
 		console.log(JSON.stringify(querySortByCount));
 		queryMongo(queryMatch, querySortByCount, function(err, data) {
