@@ -7,23 +7,23 @@ var app = express();
 var str = "";
 console.log("Server running")
 
-var queryMongo = function(queryMatch, querySortByCount, callback) {
-	MongoClient.connect(urlMongo, queryMatch, querySortByCount, function(err, db) {
+var queryMongo = function(querySortByCount, callback) {
+	MongoClient.connect(urlMongo, querySortByCount, function(err, db) {
     if (err) throw err;
 	  console.log("Connected successfully to server")
 
 
-		executeAggregateQuery(queryMatch, querySortByCount, db, function(err, data) {
+		executeAggregateQuery(querySortByCount, db, function(err, data) {
 			callback(err, data);
 				db.close();
 		});
 	})
 }
 
-var executeAggregateQuery = function(queryMatch, querySortByCount, db, callback) {
+var executeAggregateQuery = function(querySortByCount, db, callback) {
 		const client = db.db();
 		const collection = client.collection('assets');
-				collection.aggregate([queryMatch, querySortByCount]).toArray(function(err, docs) {
+				collection.aggregate([querySortByCount]).toArray(function(err, docs) {
         callback(err, docs);
     });
 };
@@ -39,8 +39,8 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res, next) {
     console.log("Someone connected.")
 
-		var queryMatch = req.query.queryMatch;
-		console.log(req.query.queryMatch);
+		//var queryMatch = req.query.queryMatch;
+		//console.log(req.query.queryMatch);
 
 
 		var querySortByCount = req.query.querySortByCount;
@@ -98,7 +98,7 @@ app.get('/', function(req, res, next) {
 				break;*/
 			}
 		console.log(JSON.stringify(querySortByCount));
-		queryMongo(queryMatch, querySortByCount, function(err, data) {
+		queryMongo(querySortByCount, function(err, data) {
         if(err)
             res.status(500).json({error: err});
         else

@@ -11,7 +11,8 @@ function Calculate(Parameter, Indicator, querySortByCount) {
   const queryMatch = document.querySelector('meta[name="description"]').content;
   console.log (queryMatch);
 
-  var params = "querySortByCount="+querySortByCount+"&queryMatch="+queryMatch+"";
+  //var params = "querySortByCount="+querySortByCount+"&queryMatch="+queryMatch+"";
+  var params = "querySortByCount="+querySortByCount;
 
   xhttp.open("GET", "http://localhost:3000"+"?"+params, false);
   console.log("GET", "http://localhost:3000"+"?"+params)
