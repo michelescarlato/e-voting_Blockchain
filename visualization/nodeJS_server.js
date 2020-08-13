@@ -5,6 +5,7 @@ const urlMongo = 'mongodb://localhost:27017/bigchain'
 var express = require('express');
 var app = express();
 var str = "";
+console.log("Server running")
 
 var queryMongo = function(queryMatch, querySortByCount, callback) {
 	MongoClient.connect(urlMongo, queryMatch, querySortByCount, function(err, db) {
