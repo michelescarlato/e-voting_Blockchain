@@ -39,63 +39,15 @@ app.use(function(req, res, next) {
 app.get('/', function(req, res, next) {
     console.log("Someone connected.")
 
-		//var queryMatch = req.query.queryMatch;
-		//console.log(req.query.queryMatch);
-
-
 		var querySortByCount = req.query.querySortByCount;
 		console.log(req.query.querySortByCount);
 		console.log(querySortByCount);
 
-		/*switch(queryMatch){
-			case 'visitors':
-				queryMatch = {$match: {'data.Survey Type' : 'visitors' }};
-				break;
-			case 'residents':
-				queryMatch = {$match: {'data.Survey Type' : 'residents' }};
-				break;
-			case 'enterprises':
-				queryMatch = {$match: {'data.Survey Type' : 'enterprises' }};
-				break;
-			case 'municipalities':
-				queryMatch = {$match: {'data.Survey Type' : 'municipalities' }};
-				break;
-		}*/
-
 		switch(querySortByCount){
-			//ETIS
 			case 'queryVote':
 				querySortByCount = {$sortByCount:"$data.Vote"};
 				break;
-			case 'querySatisfaction':
-				querySortByCount = {$sortByCount:"$data.Overall Satisfaction"};
-				break;
-			/*socio demographic
-			case 'queryCity':
-				querySortByCount = {$sortByCount :"$data.City"};
-				break;
-			case 'queryAge':
-				querySortByCount = {$sortByCount :"$data.Age"};
-				break;
-			case 'queryGender':
-				querySortByCount = {$sortByCount :"$data.Gender"};
-				break;
-			case 'queryHighestDegree':
-				querySortByCount = {$sortByCount :"$data.Highest Degree"};
-				break;
-			case 'queryProfessionalStatus':
-				querySortByCount = {$sortByCount :"$data.Professional Status"};
-				break;
-			case 'queryAnnualHousehold':
-				querySortByCount = {$sortByCount :"$data.Annual Household"};
-				break;
-			//contributions
-			case 'queryPurpose':
-				querySortByCount = {$sortByCount :"$data.Purpose"};
-				break;
-			case 'queryInterestingFeatures':
-				querySortByCount = {$sortByCount :"$data.Interesting Features"};
-				break;*/
+			//to be completed with District vote percentage
 			}
 		console.log(JSON.stringify(querySortByCount));
 		queryMongo(querySortByCount, function(err, data) {
