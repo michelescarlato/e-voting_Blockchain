@@ -139,13 +139,11 @@ npm install express -–save
 npm install jquery
 ```
 
-This is the [package.json](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/package.json) file.
+
+The code of our node.js application can be found [here](https://github.com/michelescarlato/e-voting_Blockchain/blob/master/visualization/nodeJS_server.js).
 
 
-The code of our node.js application can be found [here](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/server_data_visualization_single_endpoint_switch_case.js).
-
-
-To interact with the node.js application there are 2 Javascripts files, [calculate.js](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/calculate_mod.js) and [myFunctions.js](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/myFunctions_mod.js), that are loaded into a [html page](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/graph_mod.html).
+To interact with the node.js application there are 2 Javascripts files, [calculate.js](https://github.com/michelescarlato/e-voting_Blockchain/blob/master/visualization/calculate_mod.js) and [myFunctions.js](https://github.com/michelescarlato/e-voting_Blockchain/blob/master/visualization/myFunctions_mod.js), that are loaded into a [html page](https://github.com/michelescarlato/e-voting_Blockchain/blob/master/visualization/graph_mod.html).
 
 [Here](https://youtu.be/80z4VyEGPhw) there is a video which shows how the interaction with the blockchain occurs, visualizing with a graph the status of the vote. 
 
