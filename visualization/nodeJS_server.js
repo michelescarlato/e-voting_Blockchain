@@ -64,7 +64,7 @@ app.get('/', function(req, res, next) {
 
 		switch(querySortByCount){
 			//ETIS
-			case 'Vote':
+			case 'queryVote':
 				querySortByCount = {$sortByCount:"$data.Vote"};
 				break;
 			case 'querySatisfaction':
