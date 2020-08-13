@@ -148,3 +148,11 @@ The code of our node.js application can be found [here](https://github.com/miche
 To interact with the node.js application there are 2 Javascripts files, [calculate.js](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/calculate_mod.js) and [myFunctions.js](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/myFunctions_mod.js), that are loaded into a [html page](https://github.com/michelescarlato/blockchainETIS/blob/master/visualization/graph_mod.html).
 
 
+## Experiments
+
+In the test directory there are files used during the experiments, and a description of the test carried on.
+
+Here are some videos of the experiments:
+
+10 nodes experiment, running monit status to check if bigchaindb and tendermint are running correctly:
+[10 nodes monit summary](https://youtu.be/KGfNkDOaj-w)
