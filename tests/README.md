@@ -1,6 +1,6 @@
 To perform the tests for the calculcation of the throughput in Transactions Per Second (TPS), we used BASH to cycle JavaScript code towards different nodes.
 
-The bash script is TPS_bash_script.sh.
+The bash script is [TPS_bash_script.sh](https://github.com/michelescarlato/e-voting_Blockchain/blob/master/tests/TPS_bash_script.sh).
 
 This script mainly run JavaScript code using node.js and calculate the time elapsed to perform its execution.
 
