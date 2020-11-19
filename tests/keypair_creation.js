@@ -2,35 +2,35 @@ const driver = require('bigchaindb-driver')
 const fs = require('fs');
 
 
-let DistA = new driver.Ed25519Keypair()
-let DistB = new driver.Ed25519Keypair()
-let DistC = new driver.Ed25519Keypair()
+let dista = new driver.Ed25519Keypair()
+let distb = new driver.Ed25519Keypair()
+let distc = new driver.Ed25519Keypair()
 
-global.DistA_pubkey = DistA.publicKey;
-global.DistA_privkey = DistA.privateKey;
+global.dista_pubkey = dista.publicKey;
+global.dista_privkey = dista.privateKey;
 
-global.DistB_pubkey = DistB.publicKey;
-global.DistB_privkey = DistB.privateKey;
+global.distb_pubkey = distb.publicKey;
+global.distb_privkey = distb.privateKey;
 
-global.DistC_pubkey = DistC.publicKey;
-global.DistC_privkey = DistC.privateKey;
-
-
-console.log('DistrictA public key: ', DistA_pubkey)
-console.log('DistrictA private key: ', DistA_privkey)
-
-console.log('DistrictB public key: ', DistB_pubkey)
-console.log('DistrictB private key: ', DistB_privkey)
-
-console.log('DistrictC public key: ', DistC_pubkey)
-console.log('DistrictC private key: ', DistC_privkey)
+global.distc_pubkey = distc.publicKey;
+global.distc_privkey = distc.privateKey;
 
 
+console.log('DistrictA public key: ', dista_pubkey)
+console.log('DistrictA private key: ', dista_privkey)
+
+console.log('DistrictB public key: ', distb_pubkey)
+console.log('DistrictB private key: ', distb_privkey)
+
+console.log('DistrictC public key: ', distc_pubkey)
+console.log('DistrictC private key: ', distc_privkey)
 
 
-fs.writeFileSync('DistA.pubkey', DistA_pubkey);
-fs.writeFileSync('DistA.privkey', DistA_privkey);
-fs.writeFileSync('DistB.pubkey', DistB_pubkey);
-fs.writeFileSync('DistB.privkey', DistB_privkey);
-fs.writeFileSync('DistC.pubkey', DistC_pubkey);
-fs.writeFileSync('DistC.privkey', DistC_privkey);
+
+
+fs.writeFileSync('dista.pubkey', dista_pubkey);
+fs.writeFileSync('dista.privkey', dista_privkey);
+fs.writeFileSync('distb.pubkey', distb_pubkey);
+fs.writeFileSync('distb.privkey', distb_privkey);
+fs.writeFileSync('distc.pubkey', distc_pubkey);
+fs.writeFileSync('distc.privkey', distc_privkey);
