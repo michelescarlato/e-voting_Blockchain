@@ -2,7 +2,7 @@
 function sendTransatcionToBigChainDB (assetdata){
       // BigchainDB server instance or testnetwork (e.g. https://example.com/api/v1/)
       //const API_PATH = 'http://192.168.100.126:9984/api/v1/'
-      const API_PATH = 'http://localhost:9984/api/v1/'
+      const API_PATH = 'http://128.163.232.67:9984/api/v1/'
       const DNode = new BigchainDB.Ed25519Keypair()
       let createTxId
       const DistrictNode = document.querySelector('meta[name="description"]').content;
